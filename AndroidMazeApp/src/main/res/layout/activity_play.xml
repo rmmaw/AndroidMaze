@@ -1,0 +1,147 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/playActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="10dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="williameskay.cs301.cs.wm.edu.amazebywilliameskayandreillymaw.ui.PlayActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/gridLayout1"
+        android:layout_width="210dp"
+        android:layout_height="190dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="19dp"
+        android:columnCount="3"
+        android:rowCount="2" >
+
+        <Button
+            android:id="@+id/buttonLeft"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:onClick="left"
+            android:text="@string/left"
+            android:layout_gravity="bottom"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/buttonDown"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:onClick="down"
+            android:text="@string/down"
+            android:layout_gravity="bottom" />
+
+        <Button
+            android:id="@+id/buttonRight"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_column="2"
+            android:layout_row="1"
+            android:onClick="right"
+            android:text="@string/right" />
+
+        <Button
+            android:id="@+id/buttonUp"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_column="1"
+            android:layout_gravity="bottom"
+            android:layout_row="0"
+            android:onClick="up"
+            android:text="@string/up" />
+        />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/playpause"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/gridLayout1"
+        android:onClick="playPause"
+        android:layout_alignRight="@+id/linearLayout1"
+        android:text="@string/pause"
+        android:freezesText="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="68dp"
+            android:layout_height="31dp"
+            android:text="@string/battery_level"
+            android:textColor="#FFFFFF"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <ProgressBar
+            android:id="@+id/batterybar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_weight="0.17"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_marginTop="32dp"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_alignStart="@+id/linearLayout1">
+
+        <Button
+            android:id="@+id/buttonMap"
+            android:layout_width="wrap_content"
+            android:title="@string/map"
+            android:layout_height="35dp"
+            android:showAsAction="ifRoom"
+            android:onClick="map"
+            android:text="Show Map" />
+
+        <Button
+            android:id="@+id/buttonWalls"
+            android:layout_width="wrap_content"
+            android:title="@string/walls"
+            android:layout_height="35dp"
+            android:showAsAction="ifRoom"
+            android:onClick="walls"
+            android:text="Show Walls" />
+        <Button
+            android:id="@+id/buttonSol"
+            android:layout_width="wrap_content"
+            android:title="@string/sol"
+            android:layout_height="35dp"
+            android:onClick="sol"
+            android:text="Show Sol" />
+
+    </LinearLayout>
+
+</RelativeLayout>
